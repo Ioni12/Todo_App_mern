@@ -51,5 +51,5 @@ module.exports = {
   createTodo,
   updateTodo,
   deleteTodo,
-  toggleTodoStatus,
+  toggleStatusId,
 };
