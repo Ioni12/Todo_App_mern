@@ -10,7 +10,7 @@ router.post("/", todoController.createTodo);
 
 router.put("/:id", todoController.updateTodo);
 
-router.patch("/:id/toggle", todoController.toggleTodoStatus);
+router.patch("/:id/toggle/", todoController.toggleTodoStatus);
 
 router.delete("/:id", todoController.deleteTodo);
 

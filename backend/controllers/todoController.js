@@ -47,7 +47,7 @@ async function deleteTodo(req, res) {
 
 async function toggleTodoStatus(req, res) {
   try {
-    const todo = await todoService.toggleTodoStatus(req.params.id);
+    const todo = await todoService.toggleStatusId(req.params.id);
     res.json(todo);
   } catch (error) {
     res.status(404).json({ message: "action unable" });
