@@ -12,63 +12,7 @@ import {
   Loader2,
   AlertCircle,
 } from "lucide-react";
-
-// Mock API for demonstration - replace with your actual todoAPI
-const todoAPI = {
-  getAllTodos: async () => {
-    // Simulate API delay
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    return {
-      data: [
-        {
-          _id: "1",
-          title: "Complete project documentation",
-          description: "Write comprehensive docs for the new features",
-          priority: "high",
-          completed: false,
-          createdAt: new Date("2024-01-15"),
-        },
-        {
-          _id: "2",
-          title: "Review pull requests",
-          description: "",
-          priority: "medium",
-          completed: true,
-          createdAt: new Date("2024-01-14"),
-        },
-      ],
-    };
-  },
-  createTodo: async (todoData) => {
-    await new Promise((resolve) => setTimeout(resolve, 500));
-    return {
-      data: {
-        ...todoData,
-        _id: Date.now().toString(),
-        createdAt: new Date(),
-      },
-    };
-  },
-  updateTodo: async (id, todoData) => {
-    await new Promise((resolve) => setTimeout(resolve, 300));
-    return { data: { ...todoData, _id: id } };
-  },
-  deleteTodo: async (id) => {
-    await new Promise((resolve) => setTimeout(resolve, 300));
-    return { success: true };
-  },
-  toggleTodo: async (id) => {
-    await new Promise((resolve) => setTimeout(resolve, 300));
-    return {
-      data: {
-        _id: id,
-        completed: Math.random() > 0.5,
-        title: "Sample todo",
-        priority: "medium",
-      },
-    };
-  },
-};
+import { todoAPI } from "./services/api";
 
 function App() {
   const [todos, setTodos] = useState([]);
