@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "https://todo-app-mern-jcxy.onrender.com",
+  baseURL: "https://todo-app-mern-jcxy.onrender.com/api/routes",
 });
 
 export const todoAPI = {
